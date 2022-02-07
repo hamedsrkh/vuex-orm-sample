@@ -3,7 +3,8 @@
     <v-container>
       <v-card elevation="6" shaped>
         <div class="card-header pa-4 deep-purple white--text">
-          Create New Student
+          <router-link class="back-link" to="/students"><v-icon color="white">mdi-arrow-left</v-icon></router-link>
+          <p class="text-center mb-0">Create New Student</p>
         </div>
         <div class="pa-4">
           <v-row>
@@ -11,7 +12,7 @@
               <v-text-field
                 v-model="form.firstname"
                 :rules="firstNameRules"
-                :counter="10"
+                :counter="50"
                 label="First name"
                 required
                 outlined
@@ -22,7 +23,7 @@
               <v-text-field
                 v-model="form.lastname"
                 :rules="lastNameRules"
-                :counter="10"
+                :counter="50"
                 label="Last name"
                 required
                 outlined
@@ -91,3 +92,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.back-link{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+</style>

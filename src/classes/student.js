@@ -5,6 +5,7 @@ export default class Student extends Model {
 
   static fields() {
     return {
+      id: this.attr(null),
       firstname: this.attr(""),
       lastname: this.attr(""),
       age: this.attr(0),
