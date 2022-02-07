@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     dark
-    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+    :src="image"
   >
     <v-row
       align="center"
@@ -23,7 +23,13 @@
 </template>
 
 <script>
+import image from "@/assets/images/vbanner.jpg"
 export default {
   name: "Home",
+  data(){
+    return {
+      image: image
+    }
+  }
 };
 </script>
